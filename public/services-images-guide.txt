@@ -1,0 +1,50 @@
+# Services Background Images Guide
+
+## Cara Menambahkan Foto Background di Service Cards:
+
+### 📁 Letakkan file foto di folder:
+```
+public/
+└── services/
+    ├── digital-printing-bg.jpg     ← Background untuk "Digital Printing"
+    ├── outdoor-advertising-bg.jpg  ← Background untuk "Outdoor Advertising"
+    ├── merchandise-bg.jpg          ← Background untuk "Merchandise"
+    └── large-format-bg.jpg         ← Background untuk "Large Format"
+```
+
+### 📝 Nama File (Otomatis):
+- **Digital Printing** → `digital-printing-bg.jpg`
+- **Outdoor Advertising** → `outdoor-advertising-bg.jpg`
+- **Merchandise** → `merchandise-bg.jpg`
+- **Large Format** → `large-format-bg.jpg`
+
+### 🎨 Spesifikasi Foto:
+- **Format**: JPG, PNG, atau WebP
+- **Ukuran**: Recommended 400x300 pixels
+- **Opacity**: 20% (semi-transparan)
+- **Position**: Cover (memenuhi container)
+
+### ⚙️ Fitur:
+- **Auto-hide** jika foto tidak ada
+- **Gradient overlay** tetap muncul
+- **Text tetap readable** (z-index layering)
+- **Tidak mengubah setting lain**
+
+### 🔧 Customization:
+Jika ingin mengubah nama file:
+1. Edit di `src/components/Services.tsx`
+2. Ubah baris ini:
+   ```javascript
+   src={`/services/${category.title.toLowerCase().replace(/\s+/g, '-')}-bg.jpg`}
+   ```
+
+### 🎯 Hasil:
+- Background foto dengan opacity 20%
+- Gradient warna tetap muncul di atasnya
+- Icon dan text tetap jelas terbaca
+- Hover effects tetap berfungsi
+
+### 💡 Tips:
+- Gunakan foto yang relevan dengan layanan
+- Pastikan kontras cukup untuk text readability
+- Format JPG untuk ukuran file lebih kecil

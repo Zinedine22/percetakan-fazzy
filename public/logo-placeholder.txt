@@ -1,0 +1,29 @@
+# Logo Instructions
+
+## Cara Menambahkan Logo:
+
+1. **Siapkan file logo** dengan format:
+   - Format: PNG, JPG, atau SVG
+   - Recommended size: 40x40 pixels (atau persegi)
+   - Background transparan untuk PNG
+
+2. **Letakkan file logo** di folder:
+   ```
+   public/
+   └── logo.png  ← taruh logo Anda di sini
+   ```
+
+3. **Ganti nama file** jika perlu:
+   - Edit di src/components/Header.tsx
+   - Ubah `src="/logo.png"` menjadi `src="/nama-logo-anda.png"`
+
+## Ukuran Logo:
+- Container: 40x40px (w-10 h-10)
+- Auto-scale dengan object-contain
+- Sesuai dengan ukuran text "Percetakan Fazzy"
+
+## Tips:
+- Logo akan muncul di sebelah kiri text
+- Jika logo tidak ada, akan otomatis hide
+- Support transparent background
+- Responsive di mobile dan desktop

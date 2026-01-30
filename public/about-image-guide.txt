@@ -1,0 +1,57 @@
+# About Section Custom Image Guide
+
+## Cara Menambahkan Gambar Custom di About Section:
+
+### 📁 Letakkan file gambar di folder:
+```
+public/
+└── about-custom-image.jpg  ← Taruh gambar Anda di sini
+```
+
+### 📝 Spesifikasi Gambar:
+- **Format**: JPG, PNG, atau WebP
+- **Recommended size**: 800x800 pixels (aspect-square)
+- **File size**: < 500KB untuk fast loading
+- **Quality**: High quality untuk professional look
+
+### 🎨 Fitur:
+- **Auto-resize**: `object-cover` untuk memenuhi container
+- **Error handling**: Auto-fallback ke placeholder jika gambar tidak ada
+- **Overlay effect**: Gradient overlay untuk branding
+- **Responsive**: Sempurna di mobile dan desktop
+
+### ⚙️ Customization:
+
+#### 1. Ganti Nama File:
+Edit di `src/components/About.tsx` line 145:
+```javascript
+src="/about-custom-image.jpg"  // Ganti nama file ini
+```
+
+#### 2. Hapus Overlay:
+Jika tidak mau overlay, hapus line 154:
+```javascript
+<div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-50"></div>
+```
+
+#### 3. Ubah Ukuran Container:
+Edit line 141:
+```javascript
+<div className="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+  // Ganti aspect-square menjadi:
+  // aspect-video (16:9)
+  // aspect-[4/3] (4:3)
+  // h-96 (height fixed)
+```
+
+### 🎯 Tips:
+- Gunakan gambar yang relevan dengan bisnis percetakan
+- Pastikan good lighting dan composition
+- Background netral untuk better integration
+- Test di mobile untuk memastikan responsive
+
+### 🔧 Fallback:
+Jika gambar tidak ada, akan otomatis menampilkan placeholder dengan teks "Tambahkan Gambar"
+
+### 📱 Preview:
+Gambar akan muncul di sebelah kanan text "Solusi Percetakan Digital Terintegrasi" dengan ukuran yang sama persis di mobile dan desktop.
