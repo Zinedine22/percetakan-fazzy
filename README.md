@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Percetakan Fazzy - Website Digital Printing
 
-## Getting Started
+Website modern untuk Percetakan Fazzy yang menampilkan layanan digital printing, outdoor advertising, dan merchandise.
 
-First, run the development server:
+## 🚀 Features
+
+- **Responsive Design**: Optimal di desktop, tablet, dan mobile
+- **Modern UI**: Menggunakan Tailwind CSS dan glass morphism effects
+- **Custom Fonts**: Stylotype, Cocogoose, dan Avigea
+- **Smooth Animations**: Scroll-triggered animations dengan Framer Motion
+- **Knowledge Base**: Artikel informatif seputar percetakan
+- **Contact Form**: Form kontak yang mudah digunakan
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 16.1.4 dengan TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Custom fonts (Stylotype, Cocogoose, Avigea)
+
+## 📦 Installation
 
 ```bash
+# Clone repository
+git clone https://github.com/Zinedine22/percetakan-fazzy.git
+cd percetakan-fazzy
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) untuk melihat hasilnya.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Vercel (Recommended)
 
-## Learn More
+1. **Login ke Vercel**:
+   ```bash
+   npm install -g vercel
+   vercel login
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Deploy ke production**:
+   ```bash
+   vercel --prod
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Setup custom domain**:
+   - Buka Vercel Dashboard
+   - Go to Settings → Domains
+   - Add custom domain: `percetakanfazzy.id`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Static HTML Version
 
-## Deploy on Vercel
+Website juga tersedia dalam versi static HTML di `index.html` untuk deployment di hosting manapun.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+percetakan-fazzy/
+├── src/
+│   ├── app/                 # Next.js app router
+│   │   ├── globals.css      # Global styles dan font definitions
+│   │   ├── layout.tsx       # Root layout
+│   │   └── page.tsx         # Homepage
+│   └── components/          # React components
+│       ├── Header.tsx       # Navigation header
+│       ├── Hero.tsx         # Hero section
+│       ├── About.tsx        # About section
+│       ├── Services.tsx     # Services section
+│       ├── Gallery.tsx      # Knowledge Base section
+│       ├── Contact.tsx      # Contact section
+│       └── Footer.tsx       # Footer
+├── public/
+│   ├── fonts/               # Custom fonts
+│   │   ├── Stylotype.ttf
+│   │   ├── Cocogoose.ttf
+│   │   ├── Avigea.otf
+│   │   └── Coolvetica.otf
+│   ├── images/              # Image assets
+│   └── videos/              # Video assets
+├── index.html              # Static HTML version
+├── vercel.json             # Vercel configuration
+└── README.md               # This file
+```
+
+## 🎨 Custom Fonts
+
+Website menggunakan custom fonts:
+
+- **Stylotype**: Untuk header "Percetakan Fazzy"
+- **Cocogoose**: Untuk footer "Mutu Kecepatan Utama Kami"
+- **Avigea**: Font utama untuk header
+
+## 📱 Mobile Optimization
+
+Website dioptimalkan untuk mobile dengan:
+
+- Responsive breakpoints
+- Touch-friendly buttons
+- Smooth scrolling
+- Optimized font sizes
+- Mobile navigation menu
+
+## 🤝 Contributing
+
+1. Fork repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+## 📞 Contact
+
+- **Alamat**: Jl. Pangeran Natadirja, Bengkulu
+- **Telepon**: +62 811-735-865 (Admin 1), +62 811-734-965 (Admin 2)
+- **Email**: arjanggi.bkt@gmail.com
+
+## 📄 License
+
+© 2024 Percetakan Fazzy. All rights reserved.
