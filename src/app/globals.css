@@ -151,6 +151,20 @@
   }
 }
 
+/* WhatsApp Button Hover Fix */
+@media (hover: hover) {
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+}
+
+/* Mobile touch support */
+@media (hover: none) {
+  .group:active .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
