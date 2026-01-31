@@ -257,36 +257,22 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Quick WhatsApp CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white rounded-xl p-6 flex items-center justify-between group transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                <div className="flex items-center">
-                  <MessageCircle className="w-8 h-8 mr-4" />
-                  <div>
-                    <h4 className="font-bold text-lg">Chat WhatsApp Langsung</h4>
-                    <p className="text-green-100">Respon cepat, konsultasi gratis</p>
-                  </div>
-                </div>
-                <div className="bg-white/20 rounded-full p-2 group-hover:bg-white/30 transition-colors duration-300">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-              </a>
-            </motion.div>
           </motion.div>
         </div>
       </div>
+      
+      {/* Floating WhatsApp Button */}
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
+      >
+        <MessageCircle className="w-6 h-6" />
+        <span className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Chat WhatsApp
+        </span>
+      </a>
     </section>
   );
 }
