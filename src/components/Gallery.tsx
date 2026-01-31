@@ -145,7 +145,7 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 md:mb-16"
         >
           {quickInfo.map((info, index) => (
             <motion.div
@@ -155,18 +155,18 @@ export default function Gallery() {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
               whileHover={{ y: -5 }}
-              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
             >
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 flex items-center justify-center">
-                  <info.icon className="w-6 h-6 text-white" />
+              <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 flex items-center justify-center">
+                  <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white">{info.title}</h3>
+                <h3 className="text-base sm:text-lg font-bold text-white">{info.title}</h3>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-1 sm:space-y-2">
                 {info.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-center space-x-2 text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0" />
+                  <li key={itemIndex} className="flex items-center space-x-2 text-gray-300 text-xs sm:text-sm">
+                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-orange-400 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}

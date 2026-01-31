@@ -79,7 +79,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-black">
+    <section id="services" className="py-12 sm:py-16 md:py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -87,18 +87,18 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
             Layanan <span className="text-gradient">Kami</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto px-2">
             Solusi lengkap untuk kebutuhan digital printing dan advertising di berbagai sektor.
           </p>
         </motion.div>
 
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {serviceCategories.map((category, index) => (
             <motion.div
               key={index}

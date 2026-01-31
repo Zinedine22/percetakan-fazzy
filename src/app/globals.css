@@ -48,6 +48,107 @@
   --font-stylotype: 'Stylotype', sans-serif;
   --font-coolvetica: 'Coolvetica', sans-serif;
   --font-cocogoose: 'Cocogoose', sans-serif;
+  --font-avigea: 'Avigea', sans-serif;
+}
+
+/* Mobile Optimization - Minimal Design */
+@media (max-width: 640px) {
+  /* Reduce padding and margins for mobile */
+  section {
+    @apply py-8;
+  }
+  
+  /* Compact container */
+  .container {
+    @apply px-3;
+  }
+  
+  /* Smaller text for mobile */
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-xl;
+  }
+  
+  h3 {
+    @apply text-lg;
+  }
+  
+  p {
+    @apply text-sm;
+  }
+  
+  /* Compact buttons */
+  .btn-primary {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  /* Reduce gaps in grids */
+  .grid {
+    @apply gap-3;
+  }
+  
+  /* Compact cards */
+  .card {
+    @apply p-3;
+  }
+  
+  /* Minimal form inputs */
+  input, textarea, select {
+    @apply py-2 text-sm;
+  }
+}
+
+/* Small Mobile Optimization */
+@media (max-width: 480px) {
+  section {
+    @apply py-6;
+  }
+  
+  .container {
+    @apply px-2;
+  }
+  
+  h1 {
+    @apply text-xl;
+  }
+  
+  h2 {
+    @apply text-lg;
+  }
+  
+  p {
+    @apply text-xs;
+  }
+  
+  .btn-primary {
+    @apply px-3 py-1.5 text-xs;
+  }
+  
+  .grid {
+    @apply gap-2;
+  }
+}
+
+/* Ultra-minimal for very small screens */
+@media (max-width: 360px) {
+  section {
+    @apply py-4;
+  }
+  
+  h1 {
+    @apply text-lg;
+  }
+  
+  h2 {
+    @apply text-base;
+  }
+  
+  p {
+    @apply text-xs;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

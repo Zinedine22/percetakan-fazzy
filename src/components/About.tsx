@@ -84,7 +84,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-black">
+    <section id="about" className="py-12 sm:py-16 md:py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -92,18 +92,18 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
             Tentang <span className="text-gradient">Kami</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto px-2">
             Mitra terpercaya untuk kebutuhan digital printing & advertising <br />bagi korporasi, instansi, dan personal.
           </p>
         </motion.div>
 
         {/* About Content */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}

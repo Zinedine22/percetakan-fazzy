@@ -39,27 +39,27 @@ export default function Hero() {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
               Solusi <span className="text-gradient">Digital Printing</span> Terpercaya
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base md:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 px-2">
               Mitra strategis pengadaan cetak untuk sektor publik maupun komersial. 
               Wujudkan materi promosi, kebutuhan event, dan administrasi Anda dengan 
               standar kualitas terbaik. 🚀 Ready to serve!
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-6 sm:mb-8 md:mb-12">
               <a
                 href="#contact"
-                className="btn-primary inline-flex items-center justify-center"
+                className="btn-primary inline-flex items-center justify-center text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3"
                 suppressHydrationWarning={true}
               >
                 Konsultasi Gratis
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href="#services"
-                className="px-6 py-3 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-900/20 transition-all duration-300"
+                className="px-4 py-2 sm:px-6 sm:py-3 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-900/20 transition-all duration-300 text-sm sm:text-base"
               >
                 Lihat Layanan
               </a>
@@ -67,11 +67,11 @@ export default function Hero() {
 
             {/* Features */}
             <motion.div 
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               <motion.div 
                 className="flex items-center space-x-3"
