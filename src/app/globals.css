@@ -150,8 +150,11 @@
     @apply text-xs;
   }
   
-  /* Contact form 1 column for very small screens */
-  .contact-grid {
+  /* All grids 1 column for very small screens */
+  .contact-grid,
+  .services-grid,
+  .about-grid,
+  .gallery-grid {
     grid-template-columns: 1fr !important;
   }
 }

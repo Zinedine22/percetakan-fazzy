@@ -176,7 +176,7 @@ export default function Gallery() {
         </motion.div>
 
         {/* Article Cards - Compact Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-3 lg:gap-6 gallery-grid">
           {articleContent.map((article, index) => (
             <motion.article
               key={article.id}

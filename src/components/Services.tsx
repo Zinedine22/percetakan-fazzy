@@ -98,7 +98,7 @@ export default function Services() {
         </motion.div>
 
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-2 gap-3 lg:gap-8 services-grid">
           {serviceCategories.map((category, index) => (
             <motion.div
               key={index}

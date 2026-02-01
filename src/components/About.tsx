@@ -103,7 +103,7 @@ export default function About() {
         </motion.div>
 
         {/* About Content */}
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12 md:mb-16">
+        <div className="grid grid-cols-2 gap-3 lg:gap-8 mb-6 sm:mb-8 md:mb-12 about-grid">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
