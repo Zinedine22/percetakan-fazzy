@@ -93,7 +93,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -101,35 +101,35 @@ export default function Contact() {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Kirim Pesan</h3>
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 md:p-6 shadow-xl">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Kirim Pesan</h3>
               
-              <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              <form className="space-y-3 sm:space-y-4" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-2 gap-2 sm:gap-3">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Nama Lengkap
+                    <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+                      Nama
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 placeholder-gray-500"
-                      placeholder="Ketik Disini"
+                      className="w-full px-2 sm:px-3 py-2 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 placeholder-gray-500 text-xs sm:text-sm"
+                      placeholder="Nama"
                       onChange={handleInputChange}
                       value={formData.name}
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
                       Email
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 placeholder-gray-500"
-                      placeholder="Ketik Disini"
+                      className="w-full px-2 sm:px-3 py-2 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 placeholder-gray-500 text-xs sm:text-sm"
+                      placeholder="Email"
                       onChange={handleInputChange}
                       value={formData.email}
                     />
@@ -137,28 +137,28 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nomor Telepon
+                  <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+                    Telepon
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 placeholder-gray-500"
-                    placeholder="+62 812-3456-7890 (Contoh)"
+                    className="w-full px-2 sm:px-3 py-2 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 placeholder-gray-500 text-xs sm:text-sm"
+                    placeholder="+62 812-3456-7890"
                     onChange={handleInputChange}
                     value={formData.phone}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Layanan yang Dibutuhkan
+                  <label htmlFor="service" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+                    Layanan
                   </label>
                   <select
                     id="service"
                     name="service"
-                    className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900"
+                    className="w-full px-2 sm:px-3 py-2 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 text-xs sm:text-sm"
                     onChange={handleInputChange}
                     value={formData.service}
                   >
@@ -177,14 +177,14 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
                     Pesan
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 placeholder-gray-500"
+                    rows={3}
+                    className="w-full px-2 sm:px-3 py-2 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 placeholder-gray-500 text-xs sm:text-sm"
                     placeholder="Jelaskan kebutuhan cetak Anda..."
                     onChange={handleInputChange}
                     value={formData.message}
@@ -193,9 +193,9 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full btn-primary inline-flex items-center justify-center"
+                  className="w-full btn-primary inline-flex items-center justify-center text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2"
                 >
-                  <Send className="w-5 h-5 mr-2" />
+                  <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   Kirim Pesan
                 </button>
               </form>
@@ -208,10 +208,10 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-4 sm:space-y-6"
           >
             {/* Contact Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={index}
@@ -219,15 +219,15 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${info.color} flex items-center justify-center flex-shrink-0`}>
-                      <info.icon className="w-6 h-6 text-white" />
+                  <div className="flex items-start space-x-2 sm:space-x-3">
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-r ${info.color} flex items-center justify-center flex-shrink-0`}>
+                      <info.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
-                      <p className="text-gray-600 text-sm whitespace-pre-line">{info.content}</p>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-xs sm:text-sm">{info.title}</h4>
+                      <p className="text-gray-600 text-xs whitespace-pre-line leading-tight">{info.content}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -240,9 +240,9 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gray-100 rounded-2xl overflow-hidden shadow-lg"
+              className="bg-gray-100 rounded-lg sm:rounded-2xl overflow-hidden shadow-lg"
             >
-              <div className="aspect-video">
+              <div className="aspect-video sm:aspect-[4/3]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.9548127622293!2d102.29264487475633!3d-3.819832443643628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e36ba817ed0a057%3A0xcd051bb85a959638!2sPercetakan%20Fazzy!5e0!3m2!1sid!2sus!4v1769312187714!5m2!1sid!2sus"
                   width="100%"
@@ -256,7 +256,6 @@ export default function Contact() {
                 />
               </div>
             </motion.div>
-
           </motion.div>
         </div>
       </div>
