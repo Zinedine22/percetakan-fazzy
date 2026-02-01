@@ -152,28 +152,121 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
-                    Layanan
+                  <label htmlFor="service" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">
+                    Layanan Kami
                   </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-2 sm:px-3 py-2 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-150 text-gray-900 text-xs sm:text-sm"
-                    onChange={handleInputChange}
-                    value={formData.service}
-                  >
-                    <option value="">Pilih Layanan</option>
-                    <option value="digital-printing">Digital Printing</option>
-                    <option value="outdoor-advertising">Outdoor Advertising</option>
-                    <option value="merchandise">Merchandise</option>
-                    <option value="large-format">Large Format</option>
-                    <option value="offset-printing">Offset Printing</option>
-                    <option value="branding">Branding & Identity</option>
-                    <option value="packaging">Packaging Design</option>
-                    <option value="signage">Signage & Neon Box</option>
-                    <option value="vehicle-branding">Vehicle Branding</option>
-                    <option value="other">Lainnya</option>
-                  </select>
+                  <div className="grid grid-cols-2 gap-2">
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="digital-printing"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "digital-printing"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Digital Printing</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="outdoor-advertising"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "outdoor-advertising"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Outdoor Advertising</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="merchandise"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "merchandise"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Merchandise</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="large-format"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "large-format"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Large Format</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="offset-printing"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "offset-printing"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Offset Printing</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="branding"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "branding"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Branding & Identity</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="packaging"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "packaging"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Packaging Design</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="signage"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "signage"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Signage & Neon Box</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="vehicle-branding"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "vehicle-branding"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Vehicle Branding</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="service"
+                        value="other"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 focus:ring-orange-500"
+                        onChange={handleInputChange}
+                        checked={formData.service === "other"}
+                      />
+                      <span className="text-xs sm:text-sm text-gray-700">Lainnya</span>
+                    </label>
+                  </div>
                 </div>
 
                 <div>

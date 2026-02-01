@@ -37,7 +37,9 @@ export default function Services() {
         { name: "Kartu Nama", icon: CreditCard },
         { name: "Brosur", icon: Mail },
         { name: "Poster", icon: Image },
-        { name: "Plakat", icon: PlakatIcon }
+        { name: "Plakat", icon: PlakatIcon },
+        { name: "Flyer", icon: Mail },
+        { name: "Katalog", icon: FileText }
       ]
     },
     {
@@ -49,7 +51,9 @@ export default function Services() {
         { name: "Banner", icon: BannerIcon },
         { name: "Spanduk", icon: SpandukIcon },
         { name: "Neon Box", icon: Lightbulb },
-        { name: "Umbul-Umbul", icon: UmbulUmbulIcon }
+        { name: "Umbul-Umbul", icon: UmbulUmbulIcon },
+        { name: "Baliho", icon: Megaphone },
+        { name: "Billboard", icon: Flag }
       ]
     },
     {
@@ -61,7 +65,9 @@ export default function Services() {
         { name: "Custom Mug", icon: Coffee },
         { name: "Tumbler", icon: TumblerIcon },
         { name: "T-shirt", icon: Shirt },
-        { name: "Goodie Bag", icon: GoodieBagIcon }
+        { name: "Goodie Bag", icon: GoodieBagIcon },
+        { name: "Topi", icon: ShoppingBag },
+        { name: "Tote Bag", icon: ShoppingBag }
       ]
     },
     {
@@ -73,7 +79,9 @@ export default function Services() {
         { name: "Sticker", icon: Sticker },
         { name: "Undangan", icon: UndanganIcon },
         { name: "Nota", icon: NotaIcon },
-        { name: "Buku", icon: BukuIcon }
+        { name: "Buku", icon: BukuIcon },
+        { name: "Kalender", icon: FileText },
+        { name: "Label", icon: Package }
       ]
     }
   ];
@@ -98,7 +106,7 @@ export default function Services() {
         </motion.div>
 
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-2 gap-3 lg:gap-8 services-grid">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-6 services-grid">
           {serviceCategories.map((category, index) => (
             <motion.div
               key={index}

@@ -157,6 +157,50 @@
   .gallery-grid {
     grid-template-columns: 1fr !important;
   }
+
+  /* Services horizontal layout on laptop */
+  @media (min-width: 1024px) {
+    .services-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1.5rem !important;
+      width: 100% !important;
+      padding: 0 !important;
+    }
+    
+    .services-grid > div {
+      width: 100% !important;
+      min-width: 100% !important;
+      max-width: 100% !important;
+      height: 100% !important;
+      min-height: 500px !important;
+    }
+    
+    .services-grid > div > div {
+      height: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    
+    .services-grid > div > div > div:last-child {
+      flex: 1 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+    
+    .services-grid .absolute.inset-0 img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+    }
+    
+    .services-grid .bg-gradient-to-br {
+      min-height: 180px !important;
+      height: 180px !important;
+    }
+  }
 }
 
 /* WhatsApp Button Hover Fix */
