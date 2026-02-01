@@ -149,6 +149,11 @@
   p {
     @apply text-xs;
   }
+  
+  /* Contact form 1 column for very small screens */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* WhatsApp Button Hover Fix */
