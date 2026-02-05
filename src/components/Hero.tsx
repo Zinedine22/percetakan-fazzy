@@ -45,7 +45,7 @@ export default function Hero() {
             <p className="text-sm sm:text-base md:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 px-2">
               Mitra strategis pengadaan cetak untuk sektor publik maupun komersial. 
               Wujudkan materi promosi, kebutuhan event, dan administrasi Anda dengan 
-              standar kualitas terbaik. 🚀 Ready to serve!
+              standar kualitas terbaik.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-6 sm:mb-8 md:mb-12">

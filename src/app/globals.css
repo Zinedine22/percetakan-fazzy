@@ -258,6 +258,7 @@ body.scroll-up [data-component-name] {
   transform: translateY(0) !important;
 }
 
+
 /* Mobile Optimization */
 @supports (-webkit-touch-callout: none) {
   /* iOS Safari specific fixes */

@@ -49,8 +49,7 @@ export default function Footer() {
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
                 Mitra terpercaya untuk semua kebutuhan digital printing dan advertising di berbagai sektor. 
-                Kami berkomitmen memberikan kualitas terbaik untuk mendukung kelancaran instansi, bisnis, 
-                maupun event Anda.
+                
               </p>
               
               {/* Contact Info */}

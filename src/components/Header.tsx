@@ -32,7 +32,7 @@ export default function Header() {
                 }}
               />
             </div>
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-white" style={{ fontFamily: 'Avigea, sans-serif' }}>
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wider" style={{ fontFamily: 'Avigea, sans-serif' }}>
               Percetakan Fazzy
             </h1>
           </div>
