@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-black to-orange-900">
+    <section id="hero" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-black to-orange-900">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
