@@ -27,7 +27,7 @@ export default function Gallery() {
       id: 1,
       title: "Teknologi Digital Printing Modern",
       category: "Teknologi",
-      image: "/images/digital-printing-tech.jpg", // Custom image path
+      image: "/images/machine-1.jpg", // Using existing image
       description: "Percetakan digital adalah revolusi dalam industri cetak modern. Teknologi ini memungkinkan pencetakan langsung dari file digital tanpa memerlukan plat cetak tradisional.",
       content: [
         "Kecepatan produksi yang jauh lebih cepat dibandingkan metode offset",
@@ -46,7 +46,7 @@ export default function Gallery() {
       id: 2,
       title: "Material & Bahan Cetak Premium",
       category: "Material",
-      image: "/images/printing-materials.jpg", // Custom image path
+      image: "/images/machine-2.jpg", // Using existing image
       description: "Pemilihan material yang tepat adalah kunci untuk hasil cetak yang berkualitas. Kami menyediakan berbagai pilihan bahan premium untuk setiap kebutuhan.",
       content: [
         "Art Paper dengan berbagai gramatur untuk hasil yang tajam",
@@ -65,7 +65,7 @@ export default function Gallery() {
       id: 3,
       title: "Mesin Cetak Industrial Grade",
       category: "Mesin",
-      image: "/images/industrial-printer.jpg", // Custom image path
+      image: "/images/machine-3.jpg", // Using existing image
       description: "Kami menggunakan mesin cetak industrial grade terbaru untuk memastikan kualitas dan konsistensi hasil cetak yang optimal.",
       content: [
         "Mesin HP Indigo untuk warna yang akurat dan konsisten",
@@ -84,7 +84,7 @@ export default function Gallery() {
       id: 4,
       title: "Finishing & Post-Processing",
       category: "Finishing",
-      image: "/images/finishing-process.jpg", // Custom image path
+      image: "/images/finished-product-1.jpg", // Using existing image
       description: "Proses finishing adalah sentuhan akhir yang membuat produk cetak Anda terlihat profesional dan tahan lama.",
       content: [
         "Laminating untuk melindungi dan meningkatkan daya tahan",
