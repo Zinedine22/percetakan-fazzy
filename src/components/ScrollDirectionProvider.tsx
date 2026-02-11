@@ -5,54 +5,46 @@ import { useEffect } from 'react';
 export default function ScrollDirectionProvider() {
   useEffect(() => {
     let lastScrollTop = 0;
-    let scrollTimer: NodeJS.Timeout;
+    let ticking = false;
 
     const handleScroll = () => {
-      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const body = document.body;
-      
-      // Clear existing classes
-      body.classList.remove('scroll-up', 'scroll-down');
-      
-      if (currentScrollTop > lastScrollTop && currentScrollTop > 50) {
-        // Scrolling down
-        body.classList.add('scroll-down');
-      } else if (currentScrollTop < lastScrollTop) {
-        // Scrolling up
-        body.classList.add('scroll-up');
-      }
-      
-      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-      
-      // Clear timer and set new one
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(() => {
-        // Remove scroll classes after scrolling stops
-        body.classList.remove('scroll-up', 'scroll-down');
-      }, 150);
-    };
-
-    // Initialize scroll detection with throttling
-    let ticking = false;
-    const throttledHandleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          handleScroll();
+          const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const body = document.body;
+          
+          // Only apply scroll classes if scrolled more than 50px
+          if (currentScrollTop > 50) {
+            if (currentScrollTop > lastScrollTop) {
+              // Scrolling down
+              body.classList.add('scroll-down');
+              body.classList.remove('scroll-up');
+            } else if (currentScrollTop < lastScrollTop) {
+              // Scrolling up
+              body.classList.add('scroll-up');
+              body.classList.remove('scroll-down');
+            }
+          } else {
+            // Remove all scroll classes when at top
+            body.classList.remove('scroll-up', 'scroll-down');
+          }
+          
+          lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
           ticking = false;
         });
+        
         ticking = true;
       }
     };
 
-    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
-    // Initial check
-    handleScroll();
+    // Set initial scroll position
+    lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     // Cleanup
     return () => {
-      window.removeEventListener('scroll', throttledHandleScroll);
-      clearTimeout(scrollTimer);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
