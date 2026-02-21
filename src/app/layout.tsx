@@ -1,9 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ScrollDirectionProvider from "@/components/ScrollDirectionProvider";
-import AdminPanel from "@/components/AdminPanel";
-import SectionHighlighter from "@/components/SectionHighlighter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,9 +62,6 @@ export default function RootLayout({
         className={`${inter.variable} font-sans antialiased`}
         suppressHydrationWarning={true}
       >
-        <ScrollDirectionProvider />
-        <AdminPanel />
-        <SectionHighlighter />
         {children}
       </body>
     </html>
